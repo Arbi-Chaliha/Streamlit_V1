@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FNFM Troubleshooting Interface{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'troubleshooting/lib/tom-select/tom-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'troubleshooting/style.css' %}">
+    <script src="{% static 'troubleshooting/lib/vis-9.1.2/vis-network.min.js' %}"></script>
+    <script src="{% static 'troubleshooting/lib/bindings/utils.js' %}"></script>
+    <script src="{% static 'troubleshooting/lib/tom-select/tom-select.min.js' %}"></script>
+</head>
+<body>
+    <header>
+        <img src="{% static 'troubleshooting/FNFM_UH_view_Tool_string.JPEG' %}" style="width:100%;">
+        <h1 style="text-align:center;">FNFM Troubleshooting Interface</h1>
+        <hr>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

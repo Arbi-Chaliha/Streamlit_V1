@@ -1,0 +1,51 @@
+{% extends "troubleshooting/base.html" %}
+{% block title %}FNFM Troubleshooting{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row" style="margin-bottom: 2em;">
+        <div class="col">
+            <label for="failure-dropdown">On which failure do you want to start?</label>
+            <select id="failure-dropdown" class="form-control"></select>
+        </div>
+        <div class="col">
+            <label for="serial-dropdown">Choose a serial number</label>
+            <select id="serial-dropdown" class="form-control"></select>
+        </div>
+        <div class="col">
+            <label for="job-dropdown">Choose a job number</label>
+            <select id="job-dropdown" class="form-control"></select>
+        </div>
+        <div class="col">
+            <label for="startjob-dropdown">Choose a start job</label>
+            <select id="startjob-dropdown" class="form-control"></select>
+        </div>
+    </div>
+    <div id="partition-id-display" style="margin-bottom: 2em;">
+        <!-- Partition ID will be shown here -->
+    </div>
+    <div>
+        <h2>Root Cause Analysis (🔴 Only)</h2>
+        <table id="rootcause-table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Root Cause</th>
+                    <th>Trigger</th>
+                    <th>Data Channel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here by JS -->
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Network Graph</h2>
+        <div id="network-graph" style="height: 800px; border: 1px solid #ccc;"></div>
+    </div>
+</div>
+<script>
+    // Example: Fetch data from Django APIs and populate dropdowns, table, and graph
+    // You will need to implement AJAX calls to your Django endpoints here.
+    // Use vis-network and utils.js for the graph rendering and interactivity.
+</script>
+{% endblock %}
