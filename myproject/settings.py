@@ -156,7 +156,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             # Optional: add custom template dirs here
-            # BASE_DIR / 'templates',
+             BASE_DIR / 'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -211,3 +211,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+KG_FILE_PATH = os.path.join(BASE_DIR, 'output_ORA_FNFM_KG.ttl')
+GRAPH_OUTPUT_DIR = os.path.join(MEDIA_ROOT, 'graphs')
+
+# Create directories if they don't exist
+os.makedirs(MEDIA_ROOT, exist_ok=True)
+os.makedirs(GRAPH_OUTPUT_DIR, exist_ok=True)
+os.makedirs(os.path.join(BASE_DIR, 'static', 'troubleshooting'), exist_ok=True)

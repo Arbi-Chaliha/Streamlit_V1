@@ -1,0 +1,19 @@
+{% extends 'troubleshooting/base.html' %}
+
+{% block title %}Error - FNFM Troubleshooting System{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <h2 class="text-danger mb-3">System Error</h2>
+    <div class="alert alert-danger">
+        <h5>An error has occurred:</h5>
+        <p class="mb-0">{{ error }}</p>
+    </div>
+    <a href="{% url 'troubleshooting:index' %}" class="btn btn-primary mt-3">
+        <i class="fas fa-home me-2"></i>Return to Home
+    </a>
+</div>
+{% endblock %}
